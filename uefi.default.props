@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros">
+    <EDK_PATH>..\..\Edk2</EDK_PATH>
+  </PropertyGroup>
+  <PropertyGroup>
+    <IncludePath>$(EDK_PATH)\MdePkg\Include\;</IncludePath>
+    <IncludePath>$(IncludePath)$(EDK_PATH)\MdePkg\Include\X64\;</IncludePath>
+    <IncludePath>$(IncludePath)$(EDK_PATH)\ShellPkg\Include\;</IncludePath>
+    <IncludePath>$(IncludePath)$(EDK_PATH)\CryptoPkg\Include\</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <LibraryPath>$(EDK_PATH)\Library\Release\</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <LibraryPath>$(EDK_PATH)\Library\Debug\</LibraryPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <BuildMacro Include="EDK_PATH">
+      <Value>$(EDK_PATH)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
