@@ -39,9 +39,7 @@
     </ClCompile>
     <Link>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
-      <AdditionalDependencies />
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
-      <SubSystem />
       <Driver>Driver</Driver>
       <SectionAlignment>32</SectionAlignment>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
