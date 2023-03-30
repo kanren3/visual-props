@@ -39,7 +39,7 @@
     </ClCompile>
     <Link>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
-      <AdditionalDependencies />
+      <AdditionalDependencies>GlueLib.lib;%(AdditionalOptions)</AdditionalDependencies>
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
       <Driver>Driver</Driver>
       <SectionAlignment>32</SectionAlignment>

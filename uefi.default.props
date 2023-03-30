@@ -4,7 +4,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Label="UserMacros">
-    <EDK_PATH>..\..\Edk2</EDK_PATH>
+    <EDK_PATH>..\..\edk2</EDK_PATH>
   </PropertyGroup>
   <PropertyGroup>
     <IncludePath>$(EDK_PATH)\MdePkg\Include\;</IncludePath>
