@@ -1,52 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
-    <ClCompile>
-      <WholeProgramOptimization>true</WholeProgramOptimization>
-      <Optimization>MinSpace</Optimization>
-    </ClCompile>
     <Link>
-      <OptimizeReferences>true</OptimizeReferences>
-      <LinkTimeCodeGeneration>UseFastLinkTimeCodeGeneration</LinkTimeCodeGeneration>
-      <AdditionalOptions>/OPT:ICF=10 %(AdditionalOptions)</AdditionalOptions>
+      <MergeSections>.rdata=.data</MergeSections>
+      <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
     <ClCompile>
-      <WholeProgramOptimization>false</WholeProgramOptimization>
-      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <WarningLevel>Level4</WarningLevel>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <OmitFramePointers>true</OmitFramePointers>
-      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <ExceptionHandling>false</ExceptionHandling>
       <BufferSecurityCheck>false</BufferSecurityCheck>
-      <ControlFlowGuard>false</ControlFlowGuard>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <StringPooling>true</StringPooling>
-      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
       <AdditionalOptions>/Gs32768 %(AdditionalOptions)</AdditionalOptions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <ExceptionHandling>SyncCThrow</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <ControlFlowGuard>false</ControlFlowGuard>
       <SDLCheck />
       <ErrorReporting />
       <FloatingPointModel />
       <CallingConvention />
     </ClCompile>
     <Link>
+      <LinkTimeCodeGeneration>UseFastLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
-      <AdditionalDependencies>GlueLib.lib;%(AdditionalOptions)</AdditionalDependencies>
-      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
-      <Driver>Driver</Driver>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateMapFile>true</GenerateMapFile>
       <SectionAlignment>32</SectionAlignment>
+      <SpecifySectionAttributes>.xdata,D;.pdata,D</SpecifySectionAttributes>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
-      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
-      <SpecifySectionAttributes>.xdata,D</SpecifySectionAttributes>
-      <EntryPointSymbol>EfiMain</EntryPointSymbol>
+      <BaseAddress>0</BaseAddress>
+      <Driver>Driver</Driver>
+      <EntryPointSymbol>UefiMain</EntryPointSymbol>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <AdditionalDependencies>UefiHiiLib.lib;UefiHiiServicesLib.lib;UefiSortLib.lib;UefiShellLib.lib;GlueLib.lib;BaseLib.lib;BaseDebugPrintErrorLevelLib.lib;BasePrintLib.lib;UefiLib.lib;UefiBootServicesTableLib.lib;UefiRuntimeServicesTableLib.lib;UefiDevicePathLibDevicePathProtocol.lib;UefiDebugLibConOut.lib;UefiMemoryLib.lib;UefiMemoryAllocationLib.lib;BaseSynchronizationLib.lib;UefiFileHandleLib.lib;%(AdditionalOptions)</AdditionalDependencies>
+      <AdditionalOptions>/OPT:ICF=10 /IGNORE:4001 /IGNORE:4281 %(AdditionalOptions)</AdditionalOptions>
       <RandomizedBaseAddress />
       <DataExecutionPrevention />
       <LinkErrorReporting />

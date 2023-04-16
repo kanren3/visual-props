@@ -4,19 +4,19 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Label="UserMacros">
-    <EDK_PATH>..\..\edk2</EDK_PATH>
+    <EDK_PATH>..\..\EDK2</EDK_PATH>
   </PropertyGroup>
   <PropertyGroup>
-    <IncludePath>$(EDK_PATH)\MdePkg\Include\;</IncludePath>
-    <IncludePath>$(IncludePath)$(EDK_PATH)\MdePkg\Include\X64\;</IncludePath>
-    <IncludePath>$(IncludePath)$(EDK_PATH)\ShellPkg\Include\;</IncludePath>
-    <IncludePath>$(IncludePath)$(EDK_PATH)\CryptoPkg\Include\</IncludePath>
+    <IncludePath>$(IncludePath)$(EDK_PATH)\Include\MdePkg\;</IncludePath>
+    <IncludePath>$(IncludePath)$(EDK_PATH)\Include\MdePkg\X64\;</IncludePath>
+    <IncludePath>$(IncludePath)$(EDK_PATH)\Include\ShellPkg\;</IncludePath>
+    <IncludePath>$(IncludePath)$(EDK_PATH)\Include\CryptoPkg\</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)'=='Release'">
-    <LibraryPath>$(EDK_PATH)\Library\Release\</LibraryPath>
+    <LibraryPath>$(EDK_PATH)\Library\</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)'=='Debug'">
-    <LibraryPath>$(EDK_PATH)\Library\Debug\</LibraryPath>
+    <LibraryPath>$(EDK_PATH)\Library\</LibraryPath>
   </PropertyGroup>
   <ItemGroup>
     <BuildMacro Include="EDK_PATH">
