@@ -57,6 +57,8 @@
     </Link>
   </ItemDefinitionGroup>
   <PropertyGroup>
+    <IntDir>$(SolutionDir)build\$(Platform)\$(Configuration)\$(TargetName)\</IntDir>
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\</OutDir>
     <TargetExt>.efi</TargetExt>
     <GenerateManifest />
   </PropertyGroup>
