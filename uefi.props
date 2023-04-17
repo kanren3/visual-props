@@ -40,7 +40,7 @@
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <BaseAddress>0</BaseAddress>
       <Driver>Driver</Driver>
-      <EntryPointSymbol>UefiMain</EntryPointSymbol>
+      <EntryPointSymbol>EfiMain</EntryPointSymbol>
       <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
       <AdditionalDependencies>UefiHiiLib.lib;UefiHiiServicesLib.lib;UefiSortLib.lib;UefiShellLib.lib;GlueLib.lib;BaseLib.lib;BaseDebugPrintErrorLevelLib.lib;BasePrintLib.lib;UefiLib.lib;UefiBootServicesTableLib.lib;UefiRuntimeServicesTableLib.lib;UefiDevicePathLibDevicePathProtocol.lib;UefiDebugLibConOut.lib;UefiMemoryLib.lib;UefiMemoryAllocationLib.lib;BaseSynchronizationLib.lib;UefiFileHandleLib.lib;%(AdditionalOptions)</AdditionalDependencies>
       <AdditionalOptions>/OPT:ICF=10 /IGNORE:4001 /IGNORE:4281 %(AdditionalOptions)</AdditionalOptions>
