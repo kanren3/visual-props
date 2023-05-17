@@ -23,7 +23,7 @@
   <Import Project="$(SolutionDir)\uefi.props" />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
-    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Link>
       <SubSystem>EFI Application</SubSystem>
       <AdditionalDependencies>UefiApplicationEntryPoint.lib;%(AdditionalDependencies)</AdditionalDependencies>
