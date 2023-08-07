@@ -32,8 +32,9 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <OutDir>$(SolutionDir)Build\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)Build\$(Platform)\$(Configuration)\$(TargetName)\</IntDir>
+    <IncludePath>..\include;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\$(Platform)\$(Configuration)\$(TargetName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
